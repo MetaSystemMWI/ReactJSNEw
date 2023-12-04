@@ -1,47 +1,51 @@
 // import logo from './logo.svg';
-// import './App.css';
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-//         <p>
-//          Hello World
-//         </p>
-        
-//       </header>
-//     </div>
-//   );
-// }
-// export default App;
-
-// import User from "./Component/User";
 import './App.css';
-import Jsx from './Component/Jsx';
-// import User1 from './Component/User1';
-// alert("Hello")
-function App(){
-  let data = "Ahmed";
-  function Apple(){
-    data="Ali";
-    alert(data);
-  }
-  function Apple1(){
-    data="Asif";
-    alert(data);
-  }
-  
-  return(
-    <div className="App">
-       {/* <User1 /> */}
-       {/* {Apple()} */}
-       {/* <Apple /> */}
-       {/* <Jsx /> */}
+import React from 'react'
+import {useState} from 'react';
 
-      <h1>{data}</h1>
-       <button onClick={Apple}>Click Me!</button>
-       <button onClick={()=>Apple1()}>Click Me!</button>
+function App() {
+  const [data, setData]=useState(0)
+  function updateData(){
+    setData(data+1);
+  }
+  return (
+    <div className="App">
+    <h1>{data}</h1>
+    <button onClick={updateData}>Update Data</button>
     </div>
   );
 }
 export default App;
+
+// import User from "./Component/User";
+
+
+/*
+// {/* <User1 /> */
+      //  {/* {Apple()} */}
+      //  {/* <Apple /> */}
+      //  {/* <Jsx /> */}
+
+      //  <h1>{data}</h1>
+       /* <button onClick={Apple}>Click Me!</button>
+      //  <button onClick={()=>Apple1()}>Click Me!</button> */
+
+// */
+
+
+
+// import './App.css';
+// import React {useState} from 'react'
+// const [data, setData]=useState("Amir");
+// function updateData(){
+//   setData("Asif");
+// }
+// function App(){
+//   return(
+//     <div className="App">
+//        <h1>{data}</h1>
+//        <button onClick={updateData}>Update Data</button>
+//     </div>
+//   );
+// }
+// export default App;
