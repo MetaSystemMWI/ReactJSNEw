@@ -50,22 +50,52 @@
 // }
 // export default App;
 
-import React from 'react'
-import {useState} from 'react';
-import './App.css';
-import Std from './Component/Std';
-function App() {
-  const [name, setName]=useState("Ahmed")
-  return (
-    <div className="App">
-      <h1>Probs</h1>
-      <Std name={name}/>
-      {/* <Std name="Ahmed" email="ali@gmail.com" other={{address:': Mianwali',mobile:': 0000'}}/>
-      <Std name="Asif" email="ali@gmail.com" other={{address:': Mianwali',mobile:': 0000'}}/> */}
+// import React from 'react'
+// import {useState} from 'react';
+// import './App.css';
+// import Std from './Component/Std';
+// function App() {
+//   const [name, setName]=useState("Ahmed")
+//   return (
+//     <div className="App">
+//       <h1>Probs</h1>
+//       <Std name={name}/>
+//       {/* <Std name="Ahmed" email="ali@gmail.com" other={{address:': Mianwali',mobile:': 0000'}}/>
+//       <Std name="Asif" email="ali@gmail.com" other={{address:': Mianwali',mobile:': 0000'}}/> */}
       
-      <button onClick={()=>{setName("Ali")}}>Update Name</button>
+//       <button onClick={()=>{setName("Ali")}}>Update Name</button>
 
-    </div>
-  );
+//     </div>
+//   );
+// }
+// export default App;
+
+
+
+
+
+
+import { useState } from 'react';
+import './App.css';
+import Std_props from './Component/Std_props';
+import React from 'react';
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      name:"Asif"
+
+    }
+  }
+  
+  render(){
+    return (
+      <div className="App">
+        <h1>Probs with class Component</h1>
+        <Std_props name={this.state.name} email="asif@gmail.com"></Std_props>
+        <button onClick={()=>this.setState({name:"Ahmed"})}>Update Name</button>
+      </div>
+    );
+  }
 }
 export default App;
